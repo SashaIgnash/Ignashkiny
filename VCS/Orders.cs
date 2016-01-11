@@ -10,5 +10,7 @@ namespace VCS
     {
         public int ID { get; set; }
         public int Number { get; set; }
+
+        public Products product { get; set; }
     }
 }
