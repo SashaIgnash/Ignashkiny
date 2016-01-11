@@ -15,7 +15,15 @@ namespace VCS.Migrations
         protected override void Seed(VCS.Context context)
         {
 
+            context.ProductsList.AddOrUpdate(
+                p => p.Name,
+                new Products {Name = "Cola"},
+                new Products {Name = "Fanta"},
+                new Products {Name = "Sprite"}
+                );
+            context.SaveChanges();
 
+          
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
